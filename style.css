@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+#wrapper {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+#progress_bar {
+  font-weight: bold;
+  padding: 0;
+  height: 36px;
+  background-color: #f8f8f8;
+  line-height: 18px;
+  white-space: nowrap;
+}
+#progress_bar > li {
+  display: inline-block;
+  background-color: #bbbbbb;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 0 0 1px rgba(120, 120, 120, 0.5);
+}
+/*#progress_bar > li.last-item-in-page {
+  padding-right: 40px;
+}
+#progress_bar > li.first-item-in-page {
+  padding-left: 40px;
+}*/
+#progress_bar > li.selected, #progress_bar > li:hover {
+  background-color: #82ba00;
+}
+#progress_bar > li.selected:before, #progress_bar > li:hover:before {
+  border-left-color: #82ba00;
+}
+#progress_bar > li:after {
+  position: absolute;
+  top: 0;
+  right: -36px;
+  width: 0;
+  height: 0;
+  border: 18px solid transparent;
+  border-left-color: #fff;
+  display: block;
+  content: "";
+  z-index: 1;
+}
+#progress_bar > li:before {
+  position: absolute;
+  top: 0;
+  right: -33px;
+  width: 0;
+  height: 0;
+  border: 18px solid transparent;
+  border-left-color: #bbbbbb;
+  display: block;
+  content: "";
+  z-index: 2;
+}
+#progress_bar > li:last-child:after, #progress_bar > li:last-child:before {
+  border: none;
+}
+#progress_bar > li a {
+  color: white;
+  display: block;
+  padding: 10px 16px 8px 32px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.nav-icons-gray-right {
+  height: 0;
+  width: 0;
+  content: '';
+  border: 10px solid transparent;
+  border-left: 10px solid black;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+.nav-icons-gray-left {
+  height: 0;
+  width: 0;
+  content: '';
+  border: 10px solid transparent;
+  border-right: 10px solid black;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.pb-ib {
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.pb-ib > li{
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  font-size: 14px;
+}
+
+.pg-go {
+  height: 34px;
+  width: 32px;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  background: #888888;
+}
+.pg-go:hover {
+  background: #82ba00;
+}
+.pg-go.pg-go-right {
+  right: -3px;
+  text-align: left;
+}
+.pg-go.pg-go-left {
+  left: -3px;
+  text-align: left;
+}
+.hide {
+  display: none;
+}
